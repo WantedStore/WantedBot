@@ -8,7 +8,7 @@ const db = require('quick.db');
 const prefix = process.env.prefix
 const token = process.env.token
 
-const opa = require("opa")
+
 
 let seta = process.env.emoteseta
 let verificar = process.env.emoteverificar
@@ -43,9 +43,10 @@ client.once('ready', async () => {
     console.log("Wanted Store | INICIADO COM SUCESSO!")
 
     let statuses = [
-        { status: "stats01", activity: { name: "🚀 Wanted Store no topo!", type: "PLAYING" } },
-        { status: "stats02", activity: { name: "📨 https://discord.gg/wantedstore", type: "PLAYING" } },
-        { status: "stats03", activity: { name: `👥 Membros: ${servidor.memberCount}`, type: "PLAYING" } },
+        { status: "stats01", activity: { name: "🚀 |  Wanted Store no topo!", type: "PLAYING" } },
+        { status: "stats02", activity: { name: "📨 | https://discord.gg/wantedstore", type: "PLAYING" } },
+        { status: "stats03", activity: { name: `👥 | Membros: ${servidor.memberCount}`, type: "PLAYING" } },
+        { status: "stats04", activity: { name: `Nitro CLASSIC | Nitro GAMING ON!`, type: "PLAYING" } },
     ]
     let i = 0;
     setInterval(() => {
