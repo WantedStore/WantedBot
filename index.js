@@ -580,7 +580,7 @@ client.on('ready', async () => {
     let msg = await channel.send(embed);
     await msg.react('<:LNticket:833072749311164508>');
     console.log('Wanted Store | Sistema de Tickets --- MENSAGEM REAGIDA')
-    ticketMessage = msg
+    ticketMessage = msg 
 });
 
 client.on("messageReactionAdd", async (reaction, user) => {
@@ -648,7 +648,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
 
 ///////////////////////////////////////////////////////////
 //////            Ticket com Avaliação            ////////
-/////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
 client.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch();
