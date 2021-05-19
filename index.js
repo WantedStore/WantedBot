@@ -62,7 +62,7 @@ client.once('ready', async () => {
     const Verificar = new Discord.MessageEmbed()
         .setTitle("Wanted Store | Verificação")
         .setColor("#073dcc")
-        anail("https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png")
+        .setThumbnail("https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png")
         .setDescription(`${seta}  Bem-vindo á Wanted Store, antes de efetuar uma compra leia nossos <#821708862956634112> para evitar complicações.\n\n${seta}  Caso tenha alguma dúvida, ou queira fazer alguma compra entre em contato conosco abrindo um <#831981321316335616>.\n\n${seta}  Para se verificar na Wanted Store, é só reagir no Emoji ${verificar}.`)
         .setFooter("Wanted Store © Todos os direitos reservados.", "https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png")
 
@@ -331,7 +331,7 @@ client.on("message", async message => {
                         newEmbed.setImage(selected[pages[currentPage].key])
                         break;
                     case "thumbnail":
-                        newEmbedanail(selected[pages[currentPage].key])
+                        newEmbed.setThumbma(selected[pages[currentPage].key])
                         break;
                 }
             }
@@ -396,7 +396,7 @@ client.on("message", async message => {
                                     channelEmbed.setImage(info)
                                     break;
                                 case "thumbnail":
-                                    channelEmbedanail(info)
+                                    channelEmbed.setThumbmail(info)
                                     break;
 
                             }
@@ -458,7 +458,7 @@ client.on("message", async message => {
                                     channelEmbed.setImage(info)
                                     break;
                                 case "thumbnail":
-                                    channelEmbedanail(info)
+                                    channelEmbed.setThumbnail(info)
                                     break;
                             }
 
@@ -506,7 +506,7 @@ client.on("message", async message => {
                             newEmbed.setImage(selected[pages[currentPage].key])
                             break;
                         case "thumbnail":
-                            newEmbedanail(selected[pages[currentPage].key])
+                            newEmbed.setThumbnail(selected[pages[currentPage].key])
                             break;
                     }
                 }
@@ -530,7 +530,7 @@ client.on("message", async message => {
                                 newEmbed.setImage(selected[pages[currentPage].key])
                                 break;
                             case "thumbnail":
-                                newEmbedanail(selected[pages[currentPage].key])
+                                newEmbed.setThumbnail(selected[pages[currentPage].key])
                                 break;
                         }
                     }
@@ -620,7 +620,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
                     embed.setDescription('<a:Aviso:828688850653544528>  | **Envie suas dúvidas, você será respondido em breve!**');
                     embed.addField("👤  Usuário:", `<@${user.id}>`, true)
                     embed.addField("🔖  Leia nossos termos:", `<#821708862956634112>`, true)
-                    embedanail('https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png')
+                    embed.('https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png')
                     embed.setColor('#073dcc');
                     let msg = await ch.send(embed);
                     await msg.react("🔒")
@@ -715,7 +715,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .setTitle("Wanted Store | Avaliação do Ticket")
                     .setColor("#073dcc")
                     .setDescription("💬╵**Mensagem:**" + "\n `" + m.content + "`" + "\n ⭐╵**Avaliação:**" + "\n **`" + reaction.emoji.name.charAt(0) + "/5`**" + "\n 🛒╵**Cliente:**" + "\n <@" + user.id + ">")
-                    anail(user.displayAvatarURL({ dynamic: true }))
+                    .setThumbnail(user.displayAvatarURL({ dynamic: true }))
                     .setFooter(`Wanted Store - #${timesTicket} | ${user.username}#${user.discriminator}`, "https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png")
                 canalavaliacoes.send(embed)
             })
