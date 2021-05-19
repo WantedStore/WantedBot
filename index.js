@@ -104,7 +104,7 @@ client.on('message', async message => {
             .setFooter("Wanted Store © Todos os direitos reservados.", "https://cdn.discordapp.com/attachments/831691809859567636/844341478452756490/Logotipo-Wanted-Store.png")
 
         if (command.usage) {
-            embedrlp.addField(`\n O uso certo do comando seria: \`${prefix}${command.name} ${command.usage}\``, "** **")
+            embedrlp.addField(`\n<:error:844255510844145715> | O uso certo do comando seria: \`${prefix}${command.name} ${command.usage}\``, "** **")
         }
 
         return message.delete() && message.channel.send(embedrlp).then(message => message.delete({ timeout: 8000 }));
@@ -123,7 +123,7 @@ client.on('message', async message => {
 
         if (now < expirationTime) {
             const timeLeft = (expirationTime - now) / 1000;
-            return message.delete() && message.reply(`**<:relogio:844256626571345970>| Por favor espere \`${timeLeft.toFixed(1)}\` segundos para usar o comando \`${command.name}\`  ⏰**`).then(message => message.delete({ timeout: 8000 }));
+            return message.delete() && message.reply(`**<:relogio:844256626571345970> | Por favor espere \`${timeLeft.toFixed(1)}\` segundos para usar o comando \`${command.name}\`  ⏰**`).then(message => message.delete({ timeout: 8000 }));
         }
     } else {
         timestamps.set(message.author.id, now);
@@ -269,18 +269,18 @@ client.on("message", async message => {
             {
                 title: "Wanted Store | Título",
                 noKeyDescription: "\`📝\` **|** Escreva o **Título!**",
-                hasKeyDescription: "\`📝\` **|** O **Título** do **Anúncio**: ",
+                hasKeyDescription: "\`📝\` **|** O Título do Anúncio: ",
                 key: "title"
             },
             {
                 title: "Wanted Store | Descrição",
-                noKeyDescription: "\`🏷️\` **|** Escreva a **descrição!**",
-                hasKeyDescription: "\`🏷️\` **|** A **Descrição** do **Anúncio**: ",
+                noKeyDescription: "\`🏷️\` **|** Escreva a descrição do Anúncio.",
+                hasKeyDescription: "\`🏷️\` **|* Escreva a Descrição do Anúncio: ",
                 key: "description"
             },
             {
                 title: "Wanted Store | Thumbnail",
-                noKeyDescription: "\`🎴\` **|** Mande a imagem da **Thumbnail!**",
+                noKeyDescription: "\`🎴\` **|** Mande a imagem da **Thu mbnail!**",
                 hasKeyDescription: "\`🎴\` **|** A **Thumbnail** do **Anúncio**: ",
                 key: "thumbnail",
                 filter: m => (m.content.startsWith("http") || m.content.startsWith("https") || m.attachments.first()) && m.author.id === message.author.id
