@@ -8,7 +8,7 @@ const db = require('quick.db');
 const prefix = process.env.prefix
 const token = process.env.token
 
-const eai
+c
 
 let seta = process.env.emoteseta
 let verificar = process.env.emoteverificar
